@@ -1,0 +1,18 @@
+
+
+
+    forgetpassword
+
+    securite
+
+    design
+
+    = certificate: securite + auto + css
+
+    hosting
+
+    responsive
+
+    = password confirmed not work
+
+    = update school probleme
