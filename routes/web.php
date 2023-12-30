@@ -25,13 +25,6 @@ Route::middleware('guest')->group(function () {
 
     Route::post('login',[AuthenticatedSessionController::class,'store']);
 
-    Route::get('register_admin',[AuthenticatedSessionController::class,'register_user']);
-    Route::get('register_school',[AuthenticatedSessionController::class,'register_school']);
-
-    
-    // Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
-    //     ->name('password.request');
-
 });
 
 
@@ -42,6 +35,12 @@ Route::middleware(['auth','admin'])->group(function(){
         Route::get('/',[DashboardController::class,'admin'])->name('admin_home');
         
         Route::resource('/schools',SchoolController::class);
+
+        Route::get('/change-password/{school}',[ChangePasswordController::class,'adminChangePassword'])
+        ->name('admin.password.change');
+
+        Route::post('/change-password/{school}',[ChangePasswordController::class,'adminUpdatePassword'])
+        ->name('admin.password.update');
 
         Route::get('/schools/{school}/students',[SchoolController::class,'students'])->name('schools.students');
 

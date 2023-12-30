@@ -19,7 +19,7 @@
 
     <form action="{{ route('schools.store') }}" method="post">
         @csrf
-        <div class="grid grid-cols-2 gap-x-20 gap-y-8 pb-10 pt-4">
+        <div class="grid md:grid-cols-2 gap-x-20 gap-y-8 pb-10 pt-4">
             
             <div>
                 <label for="name" class="block text-sm font-medium leading-6 text-gray-900">اسم المؤسسة</label>

@@ -7,6 +7,8 @@
 
         <title>{{ config('app.name', 'Laravel') }} | تسجيل الدخول</title>
 
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -69,7 +71,7 @@
             </div>
 
             <div class="bg-second-color lg:flex hidden h-full items-center justify-center">
-                <img class="w-[80%]" src="{{ asset('img/login-bg-02_Mesa de trabajo 1.png') }}" alt="">
+                <img style="width:80%" src="{{ asset('img/login-bg-02_Mesa de trabajo 1.png') }}" alt="">
             </div>
 
         </div>

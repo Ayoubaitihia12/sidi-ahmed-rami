@@ -25,14 +25,12 @@
 
     </div>
 
-    {{-- <div class="flex items-center gap-x-2 justify-end py-4 border-t"> 
-      <x-button-primary>
-        شهادة مدرسية  
-      </x-button-primary>
-      <x-second-button>
-          الغاء
-      </x-second-button>
-  </div> --}}
+    <div class="flex items-center gap-x-2 justify-end py-4 border-t"> 
+
+      <a href="{{ route('admin.password.change',$school) }}" class="px-4 py-2.5 font-bold bg-green-600 rounded-lg  gap-x-2 flex items-center text-xs text-white">
+        تغيير كلمة السر
+      </a>
+  </div>
 
 </div>
 

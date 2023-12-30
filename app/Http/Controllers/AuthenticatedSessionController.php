@@ -27,7 +27,18 @@ class AuthenticatedSessionController extends Controller
         if(Auth::attempt($credentials,$request->has('remember'))){
             
             $request->session()->regenerate();
-            return redirect()->intended(Auth::user()->getRedirectRoute());
+
+            if(Auth::user()->isAdmin()){
+
+                $route = '/admin';
+    
+            }else if (Auth::user()->isSchool()){
+    
+                $route = '/';
+    
+            }  
+
+            return redirect()->intended($route);
 
         }else{
 
@@ -51,17 +62,4 @@ class AuthenticatedSessionController extends Controller
         return redirect('/login');
     }
 
-
-    public function register_user(){
-        
-        User::create([
-            'name' => 'school',
-            'code' => 'school',
-            'password' => Hash::make('12345678'),
-            'role' => 'school',
-            'remember_token' => Str::random(60),
-        ]);
-
-        return to_route('login');
-    }
 }

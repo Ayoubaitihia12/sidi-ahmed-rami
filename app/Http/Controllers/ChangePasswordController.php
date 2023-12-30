@@ -35,4 +35,27 @@ class ChangePasswordController extends Controller
 
 
     }
+
+    public function adminChangePassword(User $school){
+
+        return view('auth.adminChangePassword',compact('school'));
+    }
+
+    public function adminUpdatePassword(Request $request,User $school){
+
+        $request->validate([
+            'newPassword' => ['required', 'string', 'confirmed', 'min:8', 'regex:/[A-Z]/', 'regex:/[a-z]/', Rules\Password::defaults()],
+        ]);
+
+        User::whereId($school->id)->update([
+            'password' => Hash::make($request->newPassword)
+        ]);
+
+        return back()->with("success", "تم تغيير كلمة السر بنجاح");
+
+        // return view('auth.adminChangePassword');
+    }
+
+
+
 }

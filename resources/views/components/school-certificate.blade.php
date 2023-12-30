@@ -2,11 +2,11 @@
 
 <div style="border: 1px solid #e2e8f0; border-radius: 0.375rem; padding: 1.5rem; padding-bottom: 4rem; margin-top: 0.5rem;">
 
-    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; font-size: 0.875rem; column-gap: 1rem;">
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; font-size: 0.875rem; column-gap: 1rem;">
 
         <div>
             <p style="font-weight: 600;text-align:right">الاكاديمية الجهوية للتربية و التكوين</p>
-            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 0.5rem;">
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 0.5rem;margin-top:0px">
                 <ul style="font-weight: 300;line-height: 1.5;text-align: right">
                     <li style="list-style-type: none;">سوس - ماسة</li>
                     <li style="list-style-type: none;">عمالة : اكادير اداوتنان</li>
@@ -36,7 +36,7 @@
 
     </div>
 
-    <div style="border-width: 2px; margin-top: 1.5rem; border: 2px solid #000000; padding-left: 0.25rem; padding-right: 0.25rem; padding-top: 0.5rem; padding-bottom: 0.5rem;">
+    <div style="border-width: 2px; margin-top: 1.5rem; border: 2px solid #000000; padding-left: 0.25rem; padding-right: 0.25rem; padding-top: 0.1rem; padding-bottom: 0.1rem;">
         <h3 style="text-align: center; font-weight: 600; font-size: 0.875rem;">شهادة مدرسية رقم : {{ $user['certificate_number'] }}</h3>
     </div>
 

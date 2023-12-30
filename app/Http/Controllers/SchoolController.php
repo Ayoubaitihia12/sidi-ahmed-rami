@@ -38,7 +38,7 @@ class SchoolController extends Controller
     {
         $data = $request->validated();
 
-        
+        $data['certificate_number'] = 0;
 
         User::create([
             'code' => $data['code'],
@@ -47,6 +47,7 @@ class SchoolController extends Controller
             'commune' => $data['commune'],
             'role' => 'school',
             'password' => Hash::make($data['password']),
+            'certificate_number' => $data['certificate_number']
         ]);
 
         return to_route('schools.index')->with('success','تمت اضافة المؤسسة بنجاح ');

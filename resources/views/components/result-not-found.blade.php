@@ -1,4 +1,4 @@
 <div class="py-2">
-    <img class="w-[150px] mx-auto" src="{{ asset('img/notFound-01.png') }}" alt="">
+    <img class="mx-auto" style="width: 150px" src="{{ asset('img/notFound-01.png') }}" alt="">
     <p class="text-center">لا توجد نتائج</p>
 </div>

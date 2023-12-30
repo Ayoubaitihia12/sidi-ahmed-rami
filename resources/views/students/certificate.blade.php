@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ارشيف | الشهادة المدرسية</title>
 
+    {{-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> --}}
+
     @vite('resources/css/app.css')
 
     <style>
@@ -20,7 +22,7 @@
 <body>
     
     <div class="flex items-center justify-center w-[100vw] h-[100vh]">
-        <div class="w-[800px]" id="school-certificate">
+        <div class="w-[800px] h-[200px]" id="school-certificate">
             <x-school-certificate :user="$user" :student="$student" />   
         </div>
     </div>
