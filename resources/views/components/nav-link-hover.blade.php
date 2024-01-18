@@ -17,13 +17,13 @@
     </div>
 
     <div class="z-50 hidden w-[300px] group-hover:block space-y-2 absolute top-[100%] translate-y-[50%] bg-white border rounded-md">
-        <a href="{{ route('students.create') }}" class="font-bold {{ Request::routeIs('students.create') ? 'bg-gray-50 text-primary-color' : 'text-gray-700' }} hover:bg-gray-50 hover:text-primary-color duration-300 text-sm px-2 pr-12 block py-3">
+        <a href="{{ route('students.create') }}" class="font-bold {{ Request::routeIs('students.create') ? 'bg-gray-800 text-white-color' : 'text-gray-700' }} hover:bg-gray-800 hover:text-white-color duration-300 text-sm px-2 pr-12 block py-3">
             اضافة تلميذ جديد
         </a>
-        <a href="{{ route('students.index') }}" class="font-bold {{ Request::routeIs('students.index') ? 'bg-gray-50 text-primary-color' : 'text-gray-700' }} hover:bg-gray-50 hover:text-primary-color duration-300 px-2 pr-12 rounded-md text-sm block py-3">
+        <a href="{{ route('students.index') }}" class="font-bold {{ Request::routeIs('students.index') ? 'bg-gray-800 text-white-color' : 'text-gray-700' }} hover:bg-gray-800 hover:text-white-color duration-300 px-2 pr-12 rounded-md text-sm block py-3">
             لائحة التلاميذ
         </a>
-        <a href="{{ route('students.search') }}" class="font-bold {{ Request::routeIs('students.search') ? 'bg-gray-50 text-primary-color' : 'text-gray-700' }} hover:bg-gray-50 hover:text-primary-color duration-300 pr-12 text-sm block px-2 py-3">
+        <a href="{{ route('students.search') }}" class="font-bold {{ Request::routeIs('students.search') ? 'bg-gray-800 text-white-color' : 'text-gray-700' }} hover:bg-gray-800 hover:text-white-color duration-300 pr-12 text-sm block px-2 py-3">
             بحث فردي
         </a>
     </div>

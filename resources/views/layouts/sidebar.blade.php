@@ -33,15 +33,15 @@
     
         <div id="navbar" class="fixed -right-[100%] max-w-xs w-full inset-0 duration-700 flex">
            
-            <div class="relative mr-0 flex border shadow-md w-full max-w-xs flex-1">
+            <div class="relative mr-0 flex shadow-md w-full max-w-xs flex-1">
     
             <!-- Sidebar component, swap this element with another sidebar if you like -->
-            <div class="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
+            <div style="background-color: #111827" class="flex grow flex-col gap-y-5 overflow-y-autopx-6 pb-4 px-2">
                 <div class="flex gap-y-3 border-b flex-col py-6 pt-10 items-center gap-x-4 shrink-0">
                     <div class="w-[60px] h-[60px] rounded-full overflow-hidden">
                         <img src="{{ asset('img/profile.png') }}" class="w-full h-full object-cover" alt="">
                     </div>
-                    <h1 class="font-bold text-sm">{{ auth()->user()->name }}</h1>
+                    <h1 class="font-bold text-sm text-gray-300">{{ auth()->user()->name }}</h1>
                 </div>
                 <nav class="flex flex-1 flex-col">
                 <ul role="list" class="flex flex-1 flex-col gap-y-7">
@@ -61,7 +61,7 @@
                         <ul>
                             <div onclick="open_nav()" class="submenu-toggle z-40 block cursor-pointer w-full text-left py-2 text-sm text-gray-400 focus:outline-none">
                                 <span class="flex items-center justify-between">
-                                    <div class="w-full flex items-center justify-between text-gray-700 hover:text-primary-color hover:bg-gray-50 duration-300 group gap-x-4 rounded-md p-2 text-sm leading-6 font-bold">
+                                    <div class="w-full flex items-center justify-between text-gray-400 hover:text-white hover:bg-gray-800 duration-300 group gap-x-4 rounded-md p-2 text-xs leading-6 font-bold">
                                         <span class="flex items-end gap-x-4">
                                             <i class="fa-solid fa-user-group text-lg"></i>
                                             بطاقة التلميذ   
@@ -75,13 +75,13 @@
                         
                             <!-- Submenu content -->
                             <div class="submenu-content space-y-2 hidden">
-                                <a href="{{ route('students.create') }}" class="font-bold {{ Request::routeIs('students.create') ? 'bg-gray-50 text-primary-color' : 'text-gray-700' }} hover:bg-gray-50 hover:text-primary-color duration-300 text-sm px-2 pr-12 block py-3">
+                                <a href="{{ route('students.create') }}" class="font-bold {{ Request::routeIs('students.create') ? 'text-white-color bg-gray-800' : 'text-gray-400' }} hover:text-white hover:bg-gray-800 duration-300 text-xs px-2 pr-12 block py-3">
                                     اضافة تلميذ جديد
                                 </a>
-                                <a href="{{ route('students.index') }}" class="font-bold {{ Request::routeIs('students.index') ? 'bg-gray-50 text-primary-color' : 'text-gray-700' }} hover:bg-gray-50 hover:text-primary-color duration-300 px-2 pr-12 rounded-md text-sm block py-3">
+                                <a href="{{ route('students.index') }}" class="font-bold {{ Request::routeIs('students.index') ? 'text-white-color bg-gray-800' : 'text-gray-400' }} hover:text-white hover:bg-gray-800 duration-300 px-2 pr-12 rounded-md text-xs block py-3">
                                     لائحة التلاميذ
                                 </a>
-                                <a href="{{ route('students.search') }}" class="font-bold {{ Request::routeIs('students.search') ? 'bg-gray-50 text-primary-color' : 'text-gray-700' }} hover:bg-gray-50 hover:text-primary-color duration-300 pr-12 text-sm block px-2 py-3">
+                                <a href="{{ route('students.search') }}" class="font-bold {{ Request::routeIs('students.search') ? 'text-white-color bg-gray-800' : 'text-gray-400' }} hover:text-white hover:bg-gray-800 duration-300 pr-12 text-xs block px-2 py-3">
                                     بحث فردي
                                 </a>
                             </div>
@@ -105,14 +105,13 @@
         <!-- Static sidebar for desktop -->
         <div class="hidden border-x shadow-sm lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
             <!-- Sidebar component, swap this element with another sidebar if you like -->
-            <div class="flex grow flex-col gap-y-5 overflow-x-none overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
+            <div style="background-color: #111827" class="flex text-white grow flex-col gap-y-5 overflow-x-none overflow-y-auto border-r border-gray-200 px-6 pb-4">
                 
-                <div class="flex gap-y-3 border-b flex-col py-6 pt-10 items-center gap-x-4 shrink-0">
+                <div class="flex gap-y-3 border-b border-gray-600 flex-col py-6 pt-10 items-center gap-x-4 shrink-0">
                     <div class="w-[70px] h-[70px] rounded-full overflow-hidden">
                         <img src="{{ asset('img/profile.png') }}" class="w-full h-full object-cover" alt="">
                     </div>
-                    <h1 class="font-bold text-sm">{{ auth()->user()->name }}</h1>
-                    {{-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company"> --}}
+                    <h1 class="font-bold text-sm text-gray-300">{{ auth()->user()->name }}</h1>
                 </div>
                 <nav class="flex flex-1 flex-col">
                     <ul role="list" class="z-20 flex flex-1 flex-col gap-y-7">
@@ -129,10 +128,10 @@
                                 </x-nav-link> 
                                 @endif
                                 @if(auth()->user()->isSchool())
-                                <ul class="z-50">
-                                    <div onclick="open_nav1()" class="submenu-toggle1 z-40 block cursor-pointer w-full text-left py-2 text-sm text-gray-400 focus:outline-none">
+                                {{-- <ul class="z-50">
+                                    <div onclick="open_nav1()" class="submenu-toggle1 z-40 block cursor-pointer w-full text-left py-2 text-xs text-gray-400 focus:outline-none">
                                         <span class="flex items-center justify-between">
-                                            <div class="w-full flex items-center justify-between text-gray-700 hover:text-primary-color hover:bg-gray-50 duration-300 group gap-x-4 rounded-md p-2 text-sm leading-6 font-bold">
+                                            <div class="w-full flex items-center justify-between text-gray-400 hover:text-white-color hover:bg-gray-800 duration-300 group gap-x-4 rounded-md p-2 text-xs leading-6 font-bold">
                                                 <span class="flex items-end gap-x-4">
                                                     <i class="fa-solid fa-user-group text-lg"></i>
                                                     بطاقة التلميذ   
@@ -146,17 +145,29 @@
                                 
                                     <!-- Submenu content -->
                                     <div class="submenu-content1 space-y-2">
-                                        <a href="{{ route('students.create') }}" class="font-bold {{ Request::routeIs('students.create') ? 'bg-gray-50 text-primary-color' : 'text-gray-700' }} hover:bg-gray-50 hover:text-primary-color duration-300 text-sm px-2 pr-12 block py-3">
+                                        <a href="{{ route('students.create') }}" class="font-bold {{ Request::routeIs('students.create') ? 'bg-gray-800 text-white-color' : 'text-gray-400' }} hover:bg-gray-800 hover:text-white-color duration-300 text-xs px-2 pr-12 rounded-md block py-3">
                                             اضافة تلميذ جديد
                                         </a>
-                                        <a href="{{ route('students.index') }}" class="font-bold {{ Request::routeIs('students.index') ? 'bg-gray-50 text-primary-color' : 'text-gray-700' }} hover:bg-gray-50 hover:text-primary-color duration-300 px-2 pr-12 rounded-md text-sm block py-3">
+                                        <a href="{{ route('students.index') }}" class="font-bold {{ Request::routeIs('students.index') ? 'bg-gray-800 text-white-color' : 'text-gray-400' }} hover:bg-gray-800 hover:text-white-color duration-300 px-2 pr-12 rounded-md text-xs block py-3">
                                             لائحة التلاميذ
                                         </a>
-                                        <a href="{{ route('students.search') }}" class="font-bold {{ Request::routeIs('students.search') ? 'bg-gray-50 text-primary-color' : 'text-gray-700' }} hover:bg-gray-50 hover:text-primary-color duration-300 pr-12 text-sm block px-2 py-3">
+                                        <a href="{{ route('students.search') }}" class="font-bold {{ Request::routeIs('students.search') ? 'bg-gray-800 text-white-color' : 'text-gray-400' }} hover:bg-gray-800 hover:text-white-color duration-300 pr-12 rounded-md text-xs block px-2 py-3">
                                             بحث فردي
                                         </a>
                                     </div>
-                                </ul>                                
+                                </ul>                                 --}}
+
+                                <x-nav-link link="اضافة تلميذ جديد" path="{{ route('students.create') }}" :active="Request::routeIs('students.create')">
+                                    <i class="fa-solid fa-user-plus text-lg"></i>
+                                </x-nav-link>
+                                
+                                <x-nav-link link="لائحة التلاميذ" path="{{ route('students.index') }}" :active="Request::routeIs('students.index')">
+                                    <i class="fa-solid fa-user-group text-lg"></i>
+                                </x-nav-link>
+
+                                <x-nav-link link="بحث فردي" path="{{ route('students.search') }}" :active="Request::routeIs('students.search')">
+                                    <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                                </x-nav-link>
                                 
                                 @endif   
                                 @if(auth()->user()->isAdmin())

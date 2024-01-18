@@ -24,10 +24,12 @@
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $student['level'] }}</td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{ $student['sex'] }}</td>
                 <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
+                  @if(auth()->user()->isSchool())
                   <a href="{{ route('students.show',$student['id']) }}" class="bg-primary-color text-white px-3 py-1 rounded-lg text-xs font-semibold">
                     <i class="fa-solid fa-eye ml-2"></i>
                     التفاصيل 
                   </a>
+                  @endif
                 </td>
               </tr>
               @empty

@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\Students;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Auth;
+// use Barryvdh\DomPDF\Facade\Pdf;
+use PDF;
+// use Barryvdh\DomPDF\Facade as PDF;
 
 class StudentController extends Controller
 {
@@ -78,13 +81,12 @@ class StudentController extends Controller
     {
         $user = Auth::user();
 
-
-        $user->increment('certificate_number');
-
-        // dd($user->certificate_number);
-
+        // $user->increment('certificate_number');
 
         return view('students.certificate',compact('student','user'));
+        // $pdf = PDF::loadView('students.certificate');
+
+        // return $pdf->stream('certificate.pdf');
     }
 
     public function search(Request $request)
@@ -94,6 +96,7 @@ class StudentController extends Controller
 
         $name = $request->input('name') ?? null;
         $date = $request->input('date');
+
 
         if($name){
             $studentsQuery->where('arName','LIKE','%'.$name.'%');

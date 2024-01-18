@@ -64,14 +64,14 @@
 
         </div>
 
-        <div class="flex items-center gap-x-2 justify-end py-4 border-t"> 
+        
+        </div><div class="flex items-center gap-x-2 justify-end py-4 border-t"> 
             <x-button-primary>
                 تعديل المؤسسة
             </x-button-primary>
-            <a href="{{ route('schools.index') }}" class="bg-accent-color hover:hover-accent-color active:hover-accent-color rounded-lg text-xs text-white px-4 py-2.5 font-bold">
+            <a href="{{ url()->previous() }}" class="bg-accent-color hover:hover-accent-color active:hover-accent-color rounded-lg text-xs text-white px-4 py-2.5 font-bold">
                 الغاء
             </a>
-        </div>
 
     </form>
 </div>

@@ -2,6 +2,7 @@
 // resources/lang/ar/validation.php
 
 return [
+    'numeric' => ':attribute يجب ان يكون عبارة عن ارقام',
     'required' => 'حقل :attribute مطلوب.',
     'unique' => 'القيمة المدخلة مستخدمة بالفعل.',
     'confirmed' => 'كلمة المرور غير متطابقة.',
@@ -21,5 +22,6 @@ return [
         'dateStuding' => 'تاريخ الدراسة',
         'sex' => 'الجنس',
         'level' => 'المستوى',
+        'phone' => 'رقم الهاتف',
     ],
 ];

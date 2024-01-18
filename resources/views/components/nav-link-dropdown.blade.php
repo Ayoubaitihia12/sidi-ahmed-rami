@@ -3,7 +3,7 @@
 <ul>
     <div onclick="open_nav()" class="submenu-toggle z-40 block cursor-pointer w-full text-left py-2 text-sm text-gray-400 focus:outline-none">
         <span class="flex items-center justify-between">
-            <div class="w-full flex items-center justify-between text-gray-700 hover:text-primary-color hover:bg-gray-50 duration-300 group gap-x-4 rounded-md p-2 text-sm leading-6 font-bold">
+            <div class="w-full flex items-center justify-between text-gray-400 hover:text-white hover:bg-gray-800 duration-300 group gap-x-4 rounded-md p-2 text-sm leading-6 font-bold">
                 <span class="flex items-end gap-x-4">
                     <i class="fa-solid fa-user-group text-lg"></i>
                     بطاقة التلميذ   
